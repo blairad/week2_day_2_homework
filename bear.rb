@@ -1,10 +1,11 @@
 class Bear
 
-attr_reader :name, :type
+attr_reader :name, :type, :belly
 
-  def initialize(name, type)
+  def initialize(name, type, belly = [])
     @name = name
     @type = type
+    @belly = belly
   end
 
   def bear_name(name)
@@ -15,4 +16,12 @@ attr_reader :name, :type
     return "Panda"
   end
 
-end
+  def food_in_belly
+    return belly.count
+  end
+
+
+  def make_bear_roar()
+    return "ROAR"
+  end
+ end
